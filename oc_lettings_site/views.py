@@ -11,4 +11,20 @@ from django.shortcuts import render
 
 
 def index(request):
+    """Vue permettant d'accéder a la page index du site
+
+    Args:
+        request (request): requete passé par l'url
+
+    Returns:
+       template: retourne le template index.html
+    """
     return render(request, 'index.html')
+
+
+def error_404(request, exception):
+    return render(request, '404.html', status=404)
+
+
+def error_500(request):
+    return render(request, '500.html', status=500)
