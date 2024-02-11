@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Letting
 
 # Aenean leo magna, vestibulum et tincidunt fermentum, consectetur quis velit
@@ -8,6 +8,14 @@ from .models import Letting
 
 
 def index(request):
+    """Vue permettant d'accéder a la page index de letting
+
+    Args:
+        request (request): requete passé par l'url
+
+    Returns:
+       template: retourne le template lettings/index.html
+    """
     lettings_list = Letting.objects.all()
     context = {'lettings_list': lettings_list}
     return render(request, 'lettings/index.html', context)
@@ -27,7 +35,17 @@ def index(request):
 
 
 def letting(request, letting_id):
-    letting = Letting.objects.get(id=letting_id)
+    """Vue pour afficher le détail d'un letting
+
+    Args:
+        request (request): requete passé par l'url
+        letting_id (int): id du l'objet letting a charger
+
+    Returns:
+         template: retourne le template lettings/letting.html
+         avec les donné correspondant a l'objet letting
+    """
+    letting = get_object_or_404(Letting, id=letting_id)
     context = {
         'title': letting.title,
         'address': letting.address,
