@@ -35,6 +35,10 @@ class Address(models.Model):
     def __str__(self):
         return f'{self.number} {self.street}'
 
+    class Meta:
+        verbose_name = "Address"
+        verbose_name_plural = "Addresses"
+
 
 class Letting(models.Model):
     """Class Address, premet de créé de créé les objets address da la BDD
@@ -53,3 +57,7 @@ class Letting(models.Model):
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        verbose_name = "Letting"
+        verbose_name_plural = "Lettings"
