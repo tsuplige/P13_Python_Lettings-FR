@@ -23,8 +23,27 @@ def index(request):
 
 
 def error_404(request, exception):
+    """Vue permettant d'accéder a la page custom 404
+
+    Args:
+        request (request): requete passé par l'url
+        exception (exeption): exception ayant causé le 404
+
+    Returns:
+       template: retourne le template 404.html
+    """
+
     return render(request, '404.html', status=404)
 
 
 def error_500(request):
+    """Vue permettant d'accéder a la page custom 500
+
+    Args:
+        request (request): requete passé par l'url
+        exception (exeption): exception ayant causé le 500
+
+    Returns:
+       template: retourne le template 500.html
+    """
     return render(request, '500.html', status=500)
