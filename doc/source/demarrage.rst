@@ -1,4 +1,5 @@
-###Guide de Démarrage Rapide
+Guide de Démarrage Rapide
+=======================================
 
 Pour démarrer rapidement avec Orange County Lettings, suivez ces étapes simples :
 
