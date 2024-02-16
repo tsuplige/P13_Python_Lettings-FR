@@ -3,9 +3,9 @@ Structure de la Base de Données et Modèles de Données
 
 La base de données de Orange County Lettings est conçue avec les modèles suivants :
 
-#### Modèles de Données Principaux
+*Modèles de Données Principaux *:
 
-##### Address
+*Address*
 
 Le modèle `Address` représente une adresse physique avec les attributs suivants :
 
@@ -30,7 +30,7 @@ Le modèle `Address` représente une adresse physique avec les attributs suivant
         __str__() : Affiche une représentation textuelle de l'adresse.
 ```
 
-##### Letting
+*Letting*
 
 Le modèle `Letting` représente une location avec les attributs suivants :
 
@@ -47,7 +47,7 @@ Le modèle `Letting` représente une location avec les attributs suivants :
         __str__() : Affiche une représentation textuelle de la location.
 ```
 
-##### Profile
+*Profile*
 
 Le modèle `Profile` représente le profil d'un utilisateur avec les attributs suivants :
 
