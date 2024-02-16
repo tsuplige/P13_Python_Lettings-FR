@@ -3,37 +3,31 @@ Instructions d'Installation
 
 Avant de commencer l'installation, assurez-vous d'avoir Python et pip installés sur votre système. Clonez ensuite le repository GitHub du projet Orange County Lettings depuis l'URL fournie par le directeur technique, Dominique.
 
-``
-git clone <URL_du_repository>
-``
+``git clone https://github.com/tsuplige/P13_Python_Lettings-FR``
 
-** Installation des Dépendances**
+
+**Installation des Dépendances**
 
 Accédez au répertoire du projet et créez un environnement virtuel.
 
-``
-cd OrangeCountyLettings
-python -m venv venv
-``
+``cd OrangeCountyLettings
+python -m venv venv``
 
 Activez l'environnement virtuel.
 
 - Sur Windows :
 
-``
-venv\Scripts\activate
+``venv\Scripts\activate
 ``
 
 - Sur macOS/Linux :
 
-``
-source venv/bin/activate
+``source venv/bin/activate
 ``
 
 Installez les dépendances requises à l'aide de pip.
 
-``
-pip install -r requirements.txt
+``pip install -r requirements.txt
 ``
 
  **Configuration de l'Environnement**
@@ -42,24 +36,20 @@ Créez un fichier `.env` à la racine du projet et configurez les variables d'en
 
 ``dotenv
  *Exemple de configuration .env*
-
 DEBUG=True
 SECRET_KEY=your_secret_key
-DATABASE_URL=your_database_url
-``
+DATABASE_URL=your_database_url``
 
  **Lancement du Serveur de Développement**
 
 Appliquez les migrations pour créer la structure de la base de données.
 
-``
-python manage.py migrate
+``python manage.py migrate
 ``
 
 Démarrez le serveur de développement.
 
-``
-python manage.py runserver
+``python manage.py runserver
 ``
 
 Accédez à l'adresse `http://localhost:8000` dans votre navigateur pour accéder au site Orange County Lettings en mode local.
