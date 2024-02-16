@@ -10,7 +10,7 @@ workflows:
       - build:
           requires:
             - lint_and_test
-      - publish-latest:
+      - publish-lastest:
           requires:
             - build
       - deploy:
@@ -52,14 +52,14 @@ jobs:
         - run:
             name: "Build Image"
             command: |
-              docker build -t tsuplige/p13oclettings:0.6 .
-              docker save -o p13oclettings.tar tsuplige/p13oclettings0.6 .
+              docker build -t tsuplige/p13oclettings:lastest .
+              docker save -o p13oclettings.tar tsuplige/p13oclettings:lastest .
         - persist_to_workspace:
             root: .
             paths:
               - p13oclettings.tar
 
-  publish-latest:
+  publish-lastest:
     docker:
       - image: cimg/base:stable
     steps:
