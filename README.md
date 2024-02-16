@@ -75,3 +75,18 @@ Utilisation de PowerShell, comme ci-dessus sauf :
 
 - Pour activer l'environnement virtuel, `.\venv\Scripts\Activate.ps1` 
 - Remplacer `which <my-command>` par `(Get-Command <my-command>).Path`
+
+#### Docker
+
+Création d'une image Docker :
+
+- Pour créé une images docker, ` docker build --tag tsuplige/p13oclettings .`
+- Pour Lancer le Docker, `docker run -p 8000:8000 tsuplige/p13oclettings:0.5`
+
+#### Sentry
+
+Accéde au tableau de bord de Sentry :
+
+- Aller sur `https://sentry.io/welcome/`
+- S'inscrire et ajouté sa clé sentry dans le fichier .env dans la variable : `SENTRY_DNS_KEY`
+
