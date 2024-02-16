@@ -37,7 +37,7 @@ jobs:
           name: Run tests and lint
           command: |
             source env/bin/activate
-            flake8
+            python -m flake8
             pytest
             coverage run -m pytest 
             coverage report -m --fail-under 80
