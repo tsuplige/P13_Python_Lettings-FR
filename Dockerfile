@@ -4,7 +4,7 @@ ENV PYTHONBUFFERED 1
 
 ENV PYTHONDONTWRITEBYTECODE 1
 
-RUN /bin/mkdir /app
+RUN mkdir /app
 
 WORKDIR /app
 
@@ -14,4 +14,4 @@ RUN pip install -r requirements.txt
 
 EXPOSE 8000
 
-ENTRYPOINT ["/bin/bash", "entrypoint.sh"]
+ENTRYPOINT ["sh", "entrypoint.sh" ]
