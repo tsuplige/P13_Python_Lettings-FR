@@ -15,6 +15,15 @@ Welcome to Oc_Lettings's documentation!
 Indices and tables
 ==================
 
-* :ref:`genindex`
+* :ref:` `
 * :ref:`modindex`
 * :ref:`search`
+
+Documentation
+==================
+
+.. include::descirption.rst
+.. include::
+.. include::
+.. include::
+.. include::

@@ -16,7 +16,7 @@ Le modèle `Address` représente une adresse physique avec les attributs suivant
 - `zip_code` (PositiveIntegerField) : Code postal.
 - `country_iso_code` (CharField) : Code ISO du pays.
 
-```rst
+```
 **Address:**
 
 - ``number`` (PositiveIntegerField) : Numéro de rue.
@@ -37,7 +37,7 @@ Le modèle `Letting` représente une location avec les attributs suivants :
 - `title` (CharField) : Titre de la location.
 - `address` (OneToOneField) : Adresse associée à la location.
 
-```rst
+```
 **Letting:**
 
 - ``title`` (CharField) : Titre de la location.
@@ -54,7 +54,7 @@ Le modèle `Profile` représente le profil d'un utilisateur avec les attributs s
 - `user` (OneToOneField) : Utilisateur associé au profil.
 - `favorite_city` (CharField) : Ville préférée de l'utilisateur (optionnel).
 
-```rst
+```
 **Profile:**
 
 - ``user`` (OneToOneField) : Utilisateur associé au profil.
