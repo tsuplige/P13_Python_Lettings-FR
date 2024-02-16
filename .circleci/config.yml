@@ -45,6 +45,10 @@ jobs:
   build:
     docker:
       - image: cimg/python:3.11
+      
+    environment:
+      COMMIT_HASH: <<pipeline.trigger_parameters.github_app.commit_sha>>
+
     steps:
         - checkout
         - setup_remote_docker:
@@ -52,8 +56,8 @@ jobs:
         - run:
             name: "Build Image"
             command: |
-              docker build --tag tsuplige/p13oclettings .
-              docker save -o p13oclettings.tar tsuplige/p13oclettings .
+              docker build -t  $DOCKER_USER/p13oclettings:$COMMIT_HASH -t  $DOCKER_USER/p13oclettings:latest .
+              docker save -o p13oclettings.tar $DOCKER_USER/p13oclettings:latest .
         - persist_to_workspace:
             root: .
             paths:
