@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Procédures de Déploiement et de Gestion de l’Application &#8212; Oc_Lettings 2024 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=6fefd858"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="procedures-de-deploiement-et-de-gestion-de-l-application">
+<h1>Procédures de Déploiement et de Gestion de l’Application<a class="headerlink" href="#procedures-de-deploiement-et-de-gestion-de-l-application" title="Link to this heading">¶</a></h1>
+<p>Pour le déploiement et la gestion de l’application Orange County Lettings, nous utilisons un ensemble d’outils et de services pour automatiser le processus et assurer un déploiement fluide et fiable.</p>
+<section id="pipeline-ci-cd-avec-circleci">
+<h2>Pipeline CI/CD avec CircleCI<a class="headerlink" href="#pipeline-ci-cd-avec-circleci" title="Link to this heading">¶</a></h2>
+<p>Nous utilisons CircleCI pour mettre en place un pipeline CI/CD (Intégration Continue / Livraison Continue). Ce pipeline automatise les processus de construction, de test et de déploiement de l’application à chaque modification du code source. Il garantit que le code est testé et validé avant d’être déployé dans l’environnement de production, ce qui contribue à assurer la stabilité de l’application.</p>
+</section>
+<section id="hebergement-avec-render">
+<h2>Hébergement avec Render<a class="headerlink" href="#hebergement-avec-render" title="Link to this heading">¶</a></h2>
+<p>Pour l’hébergement de l’application Orange County Lettings, nous avons choisi Render. Render est une plateforme d’hébergement web qui offre un déploiement simple et rapide pour les applications web. Render prend en charge les applications Django et fournit un environnement d’hébergement sécurisé et évolutif. Grâce à Render, nous pouvons déployer notre application en quelques clics et bénéficier d’une infrastructure robuste et performante.</p>
+<blockquote>
+<div><p>Utilisation de Docker</p>
+</div></blockquote>
+<hr class="docutils" />
+<p>Nous utilisons Docker pour encapsuler notre application et ses dépendances dans des conteneurs légers et portables. Docker facilite le déploiement et la gestion de l’application en assurant la portabilité et la cohérence de l’environnement d’exécution. Avec Docker, nous pouvons déployer notre application de manière cohérente sur différents environnements, ce qui simplifie le processus de déploiement et réduit les erreurs potentielles.</p>
+<p>En combinant CircleCI pour l’automatisation du pipeline CI/CD, Render pour l’hébergement de l’application et Docker pour l’encapsulation des conteneurs, nous sommes en mesure de déployer et de gérer efficacement l’application Orange County Lettings. Cette approche nous permet de garantir la qualité, la fiabilité et la disponibilité de l’application tout au long de son cycle de vie.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Oc_Lettings</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Thomas Supligeon.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/deploiment.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

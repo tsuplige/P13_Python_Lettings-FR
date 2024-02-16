@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Instructions d’Installation &#8212; Oc_Lettings 2024 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=6fefd858"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="instructions-d-installation">
+<h1>Instructions d’Installation<a class="headerlink" href="#instructions-d-installation" title="Link to this heading">¶</a></h1>
+<p>Avant de commencer l’installation, assurez-vous d’avoir Python et pip installés sur votre système. Clonez ensuite le repository GitHub du projet Orange County Lettings depuis l’URL fournie par le directeur technique, Dominique.</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/tsuplige/P13_Python_Lettings-FR</span></code></p>
+<p><strong>Installation des Dépendances</strong></p>
+<p>Accédez au répertoire du projet et créez un environnement virtuel.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">OrangeCountyLettings</span></code>
+<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">venv</span> <span class="pre">venv</span></code></p>
+<p>Activez l’environnement virtuel.</p>
+<ul class="simple">
+<li><p>Sur Windows :</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">venv\Scripts\activate</span></code></p>
+<ul class="simple">
+<li><p>Sur macOS/Linux :</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">venv/bin/activate</span></code></p>
+<p>Installez les dépendances requises à l’aide de pip.</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p>
+<blockquote>
+<div><p><strong>Configuration de l’Environnement</strong></p>
+</div></blockquote>
+<p>Créez un fichier <cite>.env</cite> à la racine du projet et configurez les variables d’environnement nécessaires, telles que les clés secrètes, les paramètres de base de données, etc.</p>
+<p><code class="docutils literal notranslate"><span class="pre">dotenv</span>
+<span class="pre">DEBUG=True</span>
+<span class="pre">SECRET_KEY=your_secret_key</span>
+<span class="pre">DATABASE_URL=your_database_url</span></code></p>
+<blockquote>
+<div><p><strong>Lancement du Serveur de Développement</strong></p>
+</div></blockquote>
+<p>Appliquez les migrations pour créer la structure de la base de données.</p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">migrate</span></code></p>
+<p>Démarrez le serveur de développement.</p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">runserver</span></code></p>
+<p>Accédez à l’adresse <cite>http://localhost:8000</cite> dans votre navigateur pour accéder au site Orange County Lettings en mode local.</p>
+<p>Ces instructions devraient vous permettre de mettre en place et de faire fonctionner le site en local sur votre ordinateur, comme demandé par Dominique.</p>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Oc_Lettings</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Thomas Supligeon.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/installation.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
