@@ -6,10 +6,10 @@ orbs:
 workflows:
   build_and_deploy:
     jobs:
-      - tests
+      - lint_and_test
       - build:
           requires:
-            - tests
+            - lint_and_test
       - publish-latest:
           requires:
             - build
