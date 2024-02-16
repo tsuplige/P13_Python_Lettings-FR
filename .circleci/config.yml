@@ -1,0 +1,87 @@
+version: 2.1
+
+orbs:
+  python: circleci/python@2.0.3
+
+workflows:
+  build_and_deploy:
+    jobs:
+      - tests
+      - build:
+          requires:
+            - tests
+      - publish-latest:
+          requires:
+            - build
+      - deploy:
+          requires:
+            - build
+
+jobs:
+  lint_and_test:
+    docker:
+      - image: python:3.11
+
+    steps: 
+      - checkout
+
+      - run:
+          name: Create env and install depedencie
+          command: |
+            python3 -m venv env
+            source env/bin/activate
+            python3 -m pip install -r requirements.txt
+            python3 manage.py collectstatic
+
+      - run:
+          name: Run tests and lint
+          command: |
+            source env/bin/activate
+            flake8
+            pytest
+            coverage run -m pytest 
+            coverage report -m --fail-under 80
+          
+  build:
+    docker:
+      - image: cimg/python:3.8
+    steps:
+        - checkout
+        - setup_remote_docker:
+            docker_layer_caching: true
+        - run:
+            name: "Build Image"
+            command: |
+              docker build -t tsuplige/p13oclettings .
+              docker save -o p13oclettings.tar tsuplige/p13oclettings .
+        - persist_to_workspace:
+            root: .
+            paths:
+              - p13oclettings.tar
+
+publish-latest:
+  docker:
+    - image: cimg/base:stable
+  steps:
+      - checkout
+      - setup_remote_docker:
+        docker_layer_caching: true
+      - run:
+          name: "push image to docker hub"
+          command: |
+            echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
+            docker push tsuplige/p13oclettings
+deploy:
+    docker:
+      - image: cimg/base:stable
+    steps:
+        - checkout
+        - setup_remote_docker
+        - attach_workspace:
+            at: .
+        - run:
+            name: "Load image"
+            command: docker load -i p13oclettings.tar
+        - run:
+            name: "Deploy"
+            command: curl -X GET https://api.render.com/deploy/srv-cn7jtqo21fec73fmb6m0?key=lG_8pnlVPdU
