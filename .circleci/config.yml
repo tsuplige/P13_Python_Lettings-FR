@@ -53,7 +53,7 @@ jobs:
             name: "Build Image"
             command: |
               docker build --tag tsuplige/p13oclettings .
-              docker save -o p13oclettings.tar tsuplige/p13oclettings .
+
         - persist_to_workspace:
             root: .
             paths:
